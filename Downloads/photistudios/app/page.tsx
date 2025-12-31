@@ -22,10 +22,11 @@ export default function Home() {
     <>
       {showEntrance && <EntranceScreen onEnter={() => setShowEntrance(false)} />}
 
-      <main className="relative min-h-screen bg-white">
-        {!showEntrance && <Header />}
+      {!showEntrance && (
+        <main className="relative min-h-screen bg-white">
+          <Header />
 
-        <HeroSection />
+          <HeroSection />
 
         <Testimonial
           quote="We were blown away by Photi and his team. They exceeded expectations every step of the way: courteous, professional, always reachable and really good at their craft."
@@ -47,6 +48,7 @@ export default function Home() {
 
         <Footer />
       </main>
+      )}
     </>
   );
 }
