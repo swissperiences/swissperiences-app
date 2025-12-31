@@ -372,7 +372,7 @@ function App() {
                 whileTap={{ scale: 0.98 }}
                 className="border border-primary-dark/20 text-primary-dark px-10 py-5 text-[13px] font-semibold tracking-wide rounded-full hover:border-primary-dark hover:bg-primary-dark/5 transition-all duration-300"
               >
-                How We Work
+                How It Works
               </motion.button>
             </motion.div>
 
