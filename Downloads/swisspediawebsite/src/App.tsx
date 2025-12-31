@@ -76,7 +76,7 @@ function App() {
     },
     {
       question: "Do you guarantee admission to Swiss programs?",
-      answer: "We don't guarantee admission as that depends on each institution's criteria. However, we significantly increase your chances through expert program matching, application optimization, and institutional connections built on years of experience in the Swiss education sector."
+      answer: "No. Anyone promising guaranteed admission is either misleading you or working with unaccredited programs. What we do: we significantly increase your chances through accurate program matching, application positioning, and insights from institutional experience. We help you avoid wasting application fees on programs where you don't fit—and identify where you have genuine competitive advantage."
     },
     {
       question: "What is your fee structure?",
@@ -760,10 +760,13 @@ function App() {
               </span>
             </div>
             <h2 className="text-[42px] md:text-[56px] lg:text-[64px] font-bold text-primary-dark tracking-tight mb-6 leading-[1.1]">
-              How We Help You Succeed
+              The Cost of Getting It Wrong
             </h2>
-            <p className="text-[17px] md:text-[20px] text-primary-dark/60 max-w-3xl mx-auto leading-relaxed">
-              Personalized guidance backed by real institutional and personal experience navigating Swiss systems.
+            <p className="text-[17px] md:text-[20px] text-primary-dark/70 max-w-3xl mx-auto leading-[1.7] mb-4">
+              Swiss systems are unforgiving: a wrong visa category, missed permit renewal, or mismatched program can cost months of time and tens of thousands of francs.
+            </p>
+            <p className="text-[15px] md:text-[17px] text-primary-dark/60 max-w-2xl mx-auto leading-relaxed">
+              We help you avoid costly mistakes through guidance built on institutional experience and personal navigation of these systems.
             </p>
           </motion.div>
 
@@ -796,20 +799,29 @@ function App() {
                   {[
                     {
                       title: 'Relocation Consulting',
-                      description: 'Navigate Swiss immigration with guidance from someone who has been through it. Visa strategy, housing, banking, registration.',
+                      risk: 'Wrong visa category = denied renewal. Missed canton registration deadline = CHF 5,000+ fines.',
+                      solution: 'Navigate Swiss immigration with guidance from someone who has been through it—permit strategy, housing requirements, banking documentation, and canton-specific registration timelines.',
                     },
                     {
                       title: 'Executive Education Advisory',
-                      description: 'Find the right Swiss program for your career goals. Program selection, application support, institutional matching.',
+                      risk: 'Mismatched program = wasted tuition (CHF 30,000-80,000) and career time you cannot recover.',
+                      solution: 'Find the right program for your actual career trajectory—not just any Swiss MBA. Institutional matching based on accreditation, alumni outcomes, and your specific professional goals.',
                     },
                   ].map((service) => (
-                    <div key={service.title} className="flex gap-4 p-6 bg-neutral-50 rounded-xl border border-neutral-200 group-hover:border-primary-red/30 transition-all duration-300">
-                      <div className="flex-shrink-0 w-6 h-6 bg-primary-red rounded-full flex items-center justify-center mt-1">
-                        <Check className="w-4 h-4 text-white" />
+                    <div key={service.title} className="p-6 bg-neutral-50 rounded-xl border border-neutral-200 group-hover:border-primary-red/30 transition-all duration-300">
+                      <div className="flex gap-3 mb-3">
+                        <div className="flex-shrink-0 w-6 h-6 bg-primary-red rounded-full flex items-center justify-center mt-1">
+                          <Check className="w-4 h-4 text-white" />
+                        </div>
+                        <h4 className="text-[18px] font-bold text-primary-dark">{service.title}</h4>
                       </div>
-                      <div>
-                        <h4 className="text-[18px] font-bold text-primary-dark mb-2">{service.title}</h4>
-                        <p className="text-[15px] text-primary-dark/70 leading-relaxed">{service.description}</p>
+                      <div className="pl-9">
+                        <p className="text-[14px] text-primary-red/80 font-medium mb-3 leading-relaxed">
+                          <strong className="font-bold">Risk:</strong> {service.risk}
+                        </p>
+                        <p className="text-[15px] text-primary-dark/70 leading-relaxed">
+                          {service.solution}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -854,20 +866,29 @@ function App() {
                   {[
                     {
                       title: 'International Student Recruitment',
-                      description: 'Institutional partnerships for qualified international candidates. Access to global markets with quality pre-screening.',
+                      risk: 'Unqualified candidates waste institutional resources and damage program reputation.',
+                      solution: 'Access to pre-screened international candidates with verified qualifications and realistic expectations. Quality over volume—institutional partnerships built on candidate fit, not commission volume.',
                     },
                     {
                       title: 'Corporate Program Coordination',
-                      description: 'Executive education program facilitation for companies seeking Swiss institutional partnerships.',
+                      risk: 'Wrong institutional match = executive dissatisfaction and lost corporate training budgets.',
+                      solution: 'Executive education facilitation for companies seeking Swiss programs. We match corporate objectives with the right Swiss institutions—based on program rigor, alumni networks, and ROI expectations.',
                     },
                   ].map((service) => (
-                    <div key={service.title} className="flex gap-4 p-6 bg-neutral-50 rounded-xl border border-neutral-200 group-hover:border-primary-red/30 transition-all duration-300">
-                      <div className="flex-shrink-0 w-6 h-6 bg-primary-red rounded-full flex items-center justify-center mt-1">
-                        <Check className="w-4 h-4 text-white" />
+                    <div key={service.title} className="p-6 bg-neutral-50 rounded-xl border border-neutral-200 group-hover:border-primary-red/30 transition-all duration-300">
+                      <div className="flex gap-3 mb-3">
+                        <div className="flex-shrink-0 w-6 h-6 bg-primary-red rounded-full flex items-center justify-center mt-1">
+                          <Check className="w-4 h-4 text-white" />
+                        </div>
+                        <h4 className="text-[18px] font-bold text-primary-dark">{service.title}</h4>
                       </div>
-                      <div>
-                        <h4 className="text-[18px] font-bold text-primary-dark mb-2">{service.title}</h4>
-                        <p className="text-[15px] text-primary-dark/70 leading-relaxed">{service.description}</p>
+                      <div className="pl-9">
+                        <p className="text-[14px] text-primary-red/80 font-medium mb-3 leading-relaxed">
+                          <strong className="font-bold">Risk:</strong> {service.risk}
+                        </p>
+                        <p className="text-[15px] text-primary-dark/70 leading-relaxed">
+                          {service.solution}
+                        </p>
                       </div>
                     </div>
                   ))}
