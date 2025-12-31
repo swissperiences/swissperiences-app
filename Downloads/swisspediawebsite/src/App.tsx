@@ -1053,6 +1053,43 @@ function App() {
                 Swisspedia was founded by a <strong className="font-bold text-primary-dark">Swiss resident</strong> with institutional experience in executive education and personal understanding of the relocation process.
               </p>
 
+              {/* Micro-proofs - Institutional Credentials */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="my-12 p-6 bg-gradient-to-br from-neutral-50 to-white border border-neutral-200 rounded-2xl"
+              >
+                <p className="text-[12px] uppercase tracking-[0.12em] text-primary-dark/40 font-bold mb-4">Background</p>
+                <div className="grid md:grid-cols-2 gap-4 text-[14px] text-primary-dark/70 leading-relaxed">
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2 flex-shrink-0" />
+                    <div>
+                      <strong className="font-semibold text-primary-dark">SSBM Geneva:</strong> MBA Alumni & Former institutional team member
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2 flex-shrink-0" />
+                    <div>
+                      <strong className="font-semibold text-primary-dark">Swiss Immigration:</strong> Personal navigation of B permit, canton registration, banking setup
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2 flex-shrink-0" />
+                    <div>
+                      <strong className="font-semibold text-primary-dark">Network:</strong> 10+ years building relationships across Swiss education & relocation sectors
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2 flex-shrink-0" />
+                    <div>
+                      <strong className="font-semibold text-primary-dark">Location:</strong> Based in Geneva, Switzerland
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
               <p className="text-[17px] md:text-[19px] text-primary-dark/70 leading-[1.8]">
                 We're not just another information portal or generic agency. We're a curated platform that combines <strong className="font-semibold text-primary-red">editorial authority</strong> with <strong className="font-semibold text-primary-red">practical guidance</strong> — providing both the knowledge you need and the services to execute.
               </p>
@@ -1244,12 +1281,19 @@ function App() {
 
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-white/10">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-6">
               <p className="text-white/50 text-[13px] text-center md:text-left leading-relaxed">
                 Founded by a Swiss resident with institutional experience in executive education and immigration.
               </p>
               <p className="text-white/40 text-[13px] whitespace-nowrap">
                 © {new Date().getFullYear()} Swisspedia. All rights reserved.
+              </p>
+            </div>
+
+            {/* Minimal Founder Presence */}
+            <div className="pt-6 border-t border-white/5">
+              <p className="text-white/30 text-[11px] text-center leading-relaxed max-w-2xl mx-auto">
+                <strong className="text-white/40 font-medium">Founder:</strong> SSBM Geneva MBA alumnus (2015) • Former institutional team member • Swiss B permit holder • Geneva resident since 2014
               </p>
             </div>
           </div>
