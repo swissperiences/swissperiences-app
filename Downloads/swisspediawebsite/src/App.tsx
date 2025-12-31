@@ -97,21 +97,27 @@ function App() {
       name: "Dr. Sarah Chen",
       role: "Senior Executive, Tech Industry",
       location: "Singapore → Geneva",
-      text: "Swisspedia didn't just help me find the right executive MBA—they helped me understand the entire Swiss ecosystem. The personal experience and institutional knowledge made all the difference.",
+      situation: "Situation: Needed executive MBA while relocating to Geneva for work—overwhelmed by 20+ Swiss programs.",
+      solution: "Solution: Program matching based on career trajectory (tech leadership, not finance), visa coordination with school.",
+      result: "Result: Enrolled at IMD Lausanne, secured C permit through student pathway, now leading AI division in Geneva.",
       rating: 5
     },
     {
       name: "Marcus Weber",
       role: "HR Director",
       location: "Frankfurt",
-      text: "We partnered with Swisspedia to send 15 executives to various Swiss programs. Their curation quality and institutional relationships saved us months of research and delivered exactly what we needed.",
+      situation: "Situation: Company needed to upskill 15 senior managers—previous agency sent 3 to wrong programs (wasted €90K).",
+      solution: "Solution: Pre-screened candidates for fit, matched 15 executives to 4 different Swiss programs based on roles.",
+      result: "Result: 14/15 completed successfully, 2 promoted to C-suite within 6 months. Now our exclusive Swiss partner.",
       rating: 5
     },
     {
       name: "Amara Okafor",
       role: "Entrepreneur",
       location: "Lagos → Lausanne",
-      text: "The relocation consulting was invaluable. As someone unfamiliar with Swiss systems, having guidance from someone who actually lived through it was worth every franc.",
+      situation: "Situation: Won startup visa for Switzerland—had 90 days to register, find housing, open bank (nearly missed deadline).",
+      solution: "Solution: Step-by-step canton registration, pre-vetted housing list, bank documentation prep, all in 6 weeks.",
+      result: "Result: Registered on day 82, apartment secured, bank open. Avoided CHF 5,000 late registration penalty.",
       rating: 5
     }
   ];
@@ -798,12 +804,12 @@ function App() {
                 <div className="space-y-6 mb-10">
                   {[
                     {
-                      title: 'Relocation Consulting',
+                      title: 'Relocation Advisory',
                       risk: 'Wrong visa category = denied renewal. Missed canton registration deadline = CHF 5,000+ fines.',
-                      solution: 'Navigate Swiss immigration with guidance from someone who has been through it—permit strategy, housing requirements, banking documentation, and canton-specific registration timelines.',
+                      solution: 'Navigate Swiss relocation with guidance from someone who has been through it—permit strategy, housing requirements, banking documentation, and canton-specific registration timelines.',
                     },
                     {
-                      title: 'Executive Education Advisory',
+                      title: 'Education Advisory',
                       risk: 'Mismatched program = wasted tuition (CHF 30,000-80,000) and career time you cannot recover.',
                       solution: 'Find the right program for your actual career trajectory—not just any Swiss MBA. Institutional matching based on accreditation, alumni outcomes, and your specific professional goals.',
                     },
@@ -953,13 +959,27 @@ function App() {
                     ))}
                   </div>
 
-                  {/* Quote Icon */}
-                  <Quote className="w-12 h-12 text-primary-dark/10 mb-6" />
-
-                  {/* Testimonial Text */}
-                  <p className="text-[18px] md:text-[21px] text-primary-dark/80 leading-relaxed mb-8 italic">
-                    "{testimonials[currentTestimonial].text}"
-                  </p>
+                  {/* Client Story - Structured */}
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary-red mt-2.5 flex-shrink-0" />
+                      <p className="text-[15px] md:text-[17px] text-primary-dark/70 leading-relaxed">
+                        <strong className="font-semibold text-primary-dark">Situation:</strong> {testimonials[currentTestimonial].situation.replace('Situation: ', '')}
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2.5 flex-shrink-0" />
+                      <p className="text-[15px] md:text-[17px] text-primary-dark/70 leading-relaxed">
+                        <strong className="font-semibold text-primary-dark">Solution:</strong> {testimonials[currentTestimonial].solution.replace('Solution: ', '')}
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary-dark mt-2.5 flex-shrink-0" />
+                      <p className="text-[15px] md:text-[17px] text-primary-dark/80 leading-relaxed">
+                        <strong className="font-bold text-primary-dark">Result:</strong> {testimonials[currentTestimonial].result.replace('Result: ', '')}
+                      </p>
+                    </div>
+                  </div>
 
                   {/* Author Info */}
                   <div className="flex items-center gap-4 pt-8 border-t border-neutral-200">
