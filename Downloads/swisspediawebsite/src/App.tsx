@@ -935,6 +935,9 @@ function App() {
             <h2 className="text-[42px] md:text-[56px] lg:text-[64px] font-bold text-primary-dark tracking-tight mb-6 leading-[1.1]">
               Trusted by Professionals<br />Worldwide
             </h2>
+            <p className="text-[11px] text-primary-dark/40 text-center mb-6 italic">
+              Client stories represent real outcomes. Some details have been modified to protect privacy.
+            </p>
           </motion.div>
 
           {/* Carousel Container */}

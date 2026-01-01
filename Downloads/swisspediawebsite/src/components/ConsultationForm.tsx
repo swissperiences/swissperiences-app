@@ -76,7 +76,7 @@ const ConsultationForm = () => {
     setIsSubmitting(true);
 
     setTimeout(() => {
-      toast.success("Request received. We'll contact you within 24 hours.");
+      toast.success("Inquiry received. We will respond shortly.");
       setIsSubmitting(false);
     }, 1500);
   };
