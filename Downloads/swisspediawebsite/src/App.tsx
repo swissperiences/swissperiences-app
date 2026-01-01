@@ -389,18 +389,51 @@ function App() {
               variants={itemVariants}
               className="flex flex-wrap justify-center items-center gap-8 text-[11px] text-primary-dark/40 font-medium uppercase tracking-wider"
             >
-              <div className="flex items-center gap-2">
-                <Shield className="w-3.5 h-3.5 text-primary-gold" />
+              <motion.div
+                className="flex items-center gap-2"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+              >
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <Shield className="w-3.5 h-3.5 text-primary-gold" />
+                </motion.div>
                 <span>Editorial Quality</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-3.5 h-3.5 text-primary-gold" />
+              </motion.div>
+              <motion.div
+                className="flex items-center gap-2"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+              >
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, delay: 0.3, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <Award className="w-3.5 h-3.5 text-primary-gold" />
+                </motion.div>
                 <span>Institutional Experience</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-3.5 h-3.5 text-primary-gold" />
+              </motion.div>
+              <motion.div
+                className="flex items-center gap-2"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+              >
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, delay: 0.6, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <Zap className="w-3.5 h-3.5 text-primary-gold" />
+                </motion.div>
                 <span>Swiss Resident</span>
-              </div>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
@@ -772,11 +805,20 @@ function App() {
                       solution: 'Find the right program for your actual career trajectory—not just any Swiss MBA. Institutional matching based on accreditation, alumni outcomes, and your specific professional goals.',
                     },
                   ].map((service) => (
-                    <div key={service.title} className="p-6 bg-neutral-50 rounded-xl border border-neutral-200 group-hover:border-primary-red/30 transition-all duration-300">
+                    <motion.div
+                      key={service.title}
+                      className="p-6 bg-neutral-50 rounded-xl border border-neutral-200 group-hover:border-primary-red/30 transition-all duration-300 cursor-pointer"
+                      whileHover={{ scale: 1.02, boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08)" }}
+                      transition={{ duration: 0.2 }}
+                    >
                       <div className="flex gap-3 mb-3">
-                        <div className="flex-shrink-0 w-6 h-6 bg-primary-red rounded-full flex items-center justify-center mt-1">
+                        <motion.div
+                          className="flex-shrink-0 w-6 h-6 bg-primary-red rounded-full flex items-center justify-center mt-1"
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ duration: 0.2 }}
+                        >
                           <Check className="w-4 h-4 text-white" />
-                        </div>
+                        </motion.div>
                         <h4 className="text-[18px] font-bold text-primary-dark">{service.title}</h4>
                       </div>
                       <div className="pl-9">
@@ -787,7 +829,7 @@ function App() {
                           {service.solution}
                         </p>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
 
@@ -839,11 +881,20 @@ function App() {
                       solution: 'Executive education facilitation for companies seeking Swiss programs. We match corporate objectives with the right Swiss institutions—based on program rigor, alumni networks, and ROI expectations.',
                     },
                   ].map((service) => (
-                    <div key={service.title} className="p-6 bg-neutral-50 rounded-xl border border-neutral-200 group-hover:border-primary-red/30 transition-all duration-300">
+                    <motion.div
+                      key={service.title}
+                      className="p-6 bg-neutral-50 rounded-xl border border-neutral-200 group-hover:border-primary-red/30 transition-all duration-300 cursor-pointer"
+                      whileHover={{ scale: 1.02, boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08)" }}
+                      transition={{ duration: 0.2 }}
+                    >
                       <div className="flex gap-3 mb-3">
-                        <div className="flex-shrink-0 w-6 h-6 bg-primary-red rounded-full flex items-center justify-center mt-1">
+                        <motion.div
+                          className="flex-shrink-0 w-6 h-6 bg-primary-red rounded-full flex items-center justify-center mt-1"
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ duration: 0.2 }}
+                        >
                           <Check className="w-4 h-4 text-white" />
-                        </div>
+                        </motion.div>
                         <h4 className="text-[18px] font-bold text-primary-dark">{service.title}</h4>
                       </div>
                       <div className="pl-9">
@@ -854,7 +905,7 @@ function App() {
                           {service.solution}
                         </p>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
 
@@ -968,7 +1019,7 @@ function App() {
             {/* Navigation Dots */}
             <div className="flex justify-center gap-3 mt-8">
               {testimonials.map((_, index) => (
-                <button
+                <motion.button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`transition-all duration-300 rounded-full ${
@@ -976,6 +1027,8 @@ function App() {
                       ? 'w-10 h-3 bg-primary-red'
                       : 'w-3 h-3 bg-primary-dark/20 hover:bg-primary-dark/40'
                   }`}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
