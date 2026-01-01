@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronRight, ArrowRight, Check, Star, TrendingUp, Globe, Shield, Zap, Users, Building2, GraduationCap, Home, Briefcase, Award, MapPin, Mail, Quote, Plus, Minus, ExternalLink, Target, Clock, DollarSign } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import ConsultationForm from './components/ConsultationForm';
@@ -372,14 +373,15 @@ function App() {
                 Request Strategic Consultation
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.button>
-              <motion.button
-                onClick={() => scrollToSection('about')}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="border border-primary-dark/20 text-primary-dark px-10 py-5 text-[13px] font-semibold tracking-wide rounded-full hover:border-primary-dark hover:bg-primary-dark/5 transition-all duration-300"
-              >
-                How It Works
-              </motion.button>
+              <Link to="/how-we-work">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="border border-primary-dark/20 text-primary-dark px-10 py-5 text-[13px] font-semibold tracking-wide rounded-full hover:border-primary-dark hover:bg-primary-dark/5 transition-all duration-300"
+                >
+                  How We Work
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* Institutional Trust - Not Claims */}
