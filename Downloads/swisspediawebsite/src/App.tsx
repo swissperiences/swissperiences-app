@@ -290,7 +290,7 @@ function App() {
             {/* Editorial Badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 bg-primary-dark/5 border border-primary-dark/10 rounded-full px-5 py-2 mb-8"
+              className="inline-flex items-center gap-2 bg-primary-dark/5 border border-primary-dark/10 rounded-full px-5 py-2 mb-10"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-primary-gold" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-dark/70">
@@ -301,7 +301,7 @@ function App() {
             {/* Clear Thesis - Not Generic Pitch */}
             <motion.h1
               variants={itemVariants}
-              className="text-[52px] md:text-[68px] lg:text-[88px] font-bold leading-[1.05] text-primary-dark tracking-tight md:tracking-[-0.03em] mb-8 relative"
+              className="text-[52px] md:text-[68px] lg:text-[88px] font-bold leading-[1.05] text-primary-dark tracking-tight md:tracking-[-0.03em] mb-10 relative"
             >
               <span className="inline-block">
                 <motion.span
@@ -354,7 +354,7 @@ function App() {
             {/* Editorial Subheadline */}
             <motion.p
               variants={itemVariants}
-              className="text-[17px] md:text-[20px] lg:text-[22px] text-primary-dark/70 leading-[1.65] mb-12 max-w-3xl mx-auto font-normal"
+              className="text-[17px] md:text-[20px] lg:text-[22px] text-primary-dark/80 leading-[1.65] mb-12 max-w-3xl mx-auto font-normal"
             >
               Editorial insight and advisory services for education, relocation, and business in Switzerland—built from real Swiss experience.
             </motion.p>
