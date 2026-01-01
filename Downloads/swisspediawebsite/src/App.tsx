@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, ChevronRight, ArrowRight, Check, Star, TrendingUp, Globe, Shield, Zap, Users, Building2, GraduationCap, Home, Briefcase, Award, MapPin, Mail, Quote, Plus, Minus, ExternalLink, Target, Clock, DollarSign } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import ConsultationForm from './components/ConsultationForm';
+import { SemicirclePattern } from './components/SemicirclePattern';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -602,8 +603,11 @@ function App() {
       </section>
 
       {/* Content Pillars - Redesigned */}
-      <section id="content" className="relative py-32 bg-gradient-to-b from-neutral-50 to-white">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
+      <section id="content" className="relative py-32 bg-gradient-to-b from-neutral-50 to-white overflow-hidden">
+        {/* Semicircle Pattern - Brand element */}
+        <SemicirclePattern opacity={0.04} color="#2C2F3B" />
+
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
