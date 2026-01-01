@@ -81,7 +81,7 @@ function App() {
     },
     {
       question: "What is your fee structure?",
-      answer: "Our fees vary based on service complexity. For individuals: consultation packages range from CHF 200-5,000 depending on scope. For institutions: we work on partnership agreements with commission structures. Contact us for a personalized quote aligned with your specific needs."
+      answer: "Our fees are structured in three tiers for individuals: Quick Advisory (CHF 500-800) for single consultations, Program Matching (CHF 2,500-3,500) for 4-6 week education advisory, and Full Relocation Support (CHF 4,000-6,000) for multi-month guidance. For institutions: we work on annual partnership agreements with flat fees, not enrollment commissions. Contact us for a detailed proposal aligned with your specific needs."
     },
     {
       question: "Can you help with Swiss visa and immigration processes?",

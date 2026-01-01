@@ -76,7 +76,10 @@ const ConsultationForm = () => {
     setIsSubmitting(true);
 
     setTimeout(() => {
-      toast.success("Inquiry received. We will respond shortly.");
+      toast.success("Inquiry received. We will respond shortly.", {
+        description: "You'll receive an email within 24 hours with a preliminary assessment, proposed service tier, and next steps.",
+        duration: 8000,
+      });
       setIsSubmitting(false);
     }, 1500);
   };
