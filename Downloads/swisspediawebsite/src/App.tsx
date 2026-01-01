@@ -294,14 +294,14 @@ function App() {
             >
               <div className="w-1.5 h-1.5 rounded-full bg-primary-gold" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-dark/70">
-                Editorial Platform · Advisory Services
+                Editorial Authority · Strategic Advisory
               </span>
             </motion.div>
 
             {/* Clear Thesis - Not Generic Pitch */}
             <motion.h1
               variants={itemVariants}
-              className="text-[52px] md:text-[68px] lg:text-[88px] font-bold leading-[1.05] text-primary-dark tracking-tight mb-8 relative"
+              className="text-[52px] md:text-[68px] lg:text-[88px] font-bold leading-[1.05] text-primary-dark tracking-tight md:tracking-[-0.03em] mb-8 relative"
             >
               <span className="inline-block">
                 <motion.span
@@ -345,7 +345,7 @@ function App() {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 0.9, duration: 0.7 }}
-                    className="absolute bottom-2 left-0 right-0 h-1 bg-primary-gold/40 -z-0"
+                    className="absolute bottom-3 left-0 right-0 h-[3px] bg-primary-gold/40 -z-0"
                   />
                 </span>
               </span>
@@ -420,50 +420,6 @@ function App() {
             <motion.div className="w-1 h-2 bg-primary-dark/60 rounded-full" />
           </motion.div>
         </motion.div>
-      </section>
-
-      {/* Trusted Partners Section - Clean */}
-      <section className="relative py-20 bg-neutral-50 border-y border-neutral-200">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
-          {/* Clean Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary-dark/40 mb-4">
-              Trusted by
-            </p>
-          </motion.div>
-
-          {/* Minimalist Partners Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-5xl mx-auto">
-            {[
-              'SSBM Geneva',
-              'IMD Lausanne',
-              'EPFL',
-              'University of Geneva',
-            ].map((partner, index) => (
-              <motion.div
-                key={partner}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="group text-center"
-              >
-                <div className="h-16 flex items-center justify-center opacity-40 group-hover:opacity-70 transition-opacity duration-300">
-                  <div className="text-[17px] md:text-[19px] font-bold text-primary-dark tracking-tight">
-                    {partner}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-        </div>
       </section>
 
       {/* What Makes This Different */}
