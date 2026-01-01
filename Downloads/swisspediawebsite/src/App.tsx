@@ -246,23 +246,23 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-br from-white via-white/98 to-neutral-50/95" />
         </div>
 
-        {/* Minimal Accent Elements - Gold spots */}
+        {/* Minimal Accent Elements - Subtle brand accents */}
         <motion.div
           className="absolute inset-0 overflow-hidden pointer-events-none"
           style={{ y: useTransform(scrollYProgress, [0, 1], [0, 150]) }}
         >
-          {/* Top right gold glow */}
+          {/* Top right subtle red glow (very subtle - not dominant) */}
           <motion.div
             animate={{
               scale: [1, 1.2, 1],
-              opacity: [0.03, 0.06, 0.03],
+              opacity: [0.02, 0.04, 0.02],
             }}
             transition={{
               duration: 10,
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary-gold/30 to-transparent rounded-full blur-3xl"
+            className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary-red/15 to-transparent rounded-full blur-3xl"
           />
           {/* Bottom left navy accent */}
           <motion.div
@@ -292,7 +292,7 @@ function App() {
               variants={itemVariants}
               className="inline-flex items-center gap-2 bg-primary-dark/5 border border-primary-dark/10 rounded-full px-5 py-2 mb-10"
             >
-              <div className="w-1.5 h-1.5 rounded-full bg-primary-gold" />
+              <div className="w-1.5 h-1.5 rounded-full bg-primary-red" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-dark/70">
                 Editorial Authority · Strategic Advisory
               </span>
@@ -340,12 +340,12 @@ function App() {
                   >
                     navigable.
                   </motion.span>
-                  {/* Subtle gold underline */}
+                  {/* Subtle red underline accent */}
                   <motion.div
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 0.9, duration: 0.7 }}
-                    className="absolute bottom-3 left-0 right-0 h-[3px] bg-primary-gold/40 -z-0"
+                    className="absolute bottom-3 left-0 right-0 h-[3px] bg-primary-red/25 -z-0"
                   />
                 </span>
               </span>
@@ -400,7 +400,7 @@ function App() {
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <Shield className="w-3.5 h-3.5 text-primary-gold" />
+                  <Shield className="w-3.5 h-3.5 text-primary-red" />
                 </motion.div>
                 <span>Editorial Quality</span>
               </motion.div>
@@ -415,7 +415,7 @@ function App() {
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, delay: 0.3, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <Award className="w-3.5 h-3.5 text-primary-gold" />
+                  <Award className="w-3.5 h-3.5 text-primary-red" />
                 </motion.div>
                 <span>Institutional Experience</span>
               </motion.div>
@@ -430,7 +430,7 @@ function App() {
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, delay: 0.6, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <Zap className="w-3.5 h-3.5 text-primary-gold" />
+                  <Zap className="w-3.5 h-3.5 text-primary-red" />
                 </motion.div>
                 <span>Swiss Resident</span>
               </motion.div>
@@ -980,7 +980,7 @@ function App() {
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2.5 flex-shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary-red mt-2.5 flex-shrink-0" />
                       <p className="text-[15px] md:text-[17px] text-primary-dark/70 leading-relaxed">
                         <strong className="font-semibold text-primary-dark">Solution:</strong> {testimonials[currentTestimonial].solution.replace('Solution: ', '')}
                       </p>
@@ -1098,25 +1098,25 @@ function App() {
                 <p className="text-[12px] uppercase tracking-[0.12em] text-primary-dark/40 font-bold mb-4">Background</p>
                 <div className="grid md:grid-cols-2 gap-4 text-[14px] text-primary-dark/70 leading-relaxed">
                   <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-red mt-2 flex-shrink-0" />
                     <div>
                       <strong className="font-semibold text-primary-dark">SSBM Geneva:</strong> MBA Alumni & Former institutional team member
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-red mt-2 flex-shrink-0" />
                     <div>
                       <strong className="font-semibold text-primary-dark">Swiss Immigration:</strong> Personal navigation of B permit, canton registration, banking setup
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-red mt-2 flex-shrink-0" />
                     <div>
                       <strong className="font-semibold text-primary-dark">Network:</strong> 10+ years building relationships across Swiss education & relocation sectors
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary-gold mt-2 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-red mt-2 flex-shrink-0" />
                     <div>
                       <strong className="font-semibold text-primary-dark">Location:</strong> Based in Geneva, Switzerland
                     </div>

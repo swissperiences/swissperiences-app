@@ -127,8 +127,8 @@ const HowWeWork = () => {
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-red to-primary-dark flex items-center justify-center shadow-lg">
                         <Icon className="w-8 h-8 text-white" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary-gold flex items-center justify-center">
-                        <span className="text-[11px] font-bold text-primary-dark">{step.phase}</span>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary-red flex items-center justify-center">
+                        <span className="text-[11px] font-bold text-white">{step.phase}</span>
                       </div>
                     </div>
                   </div>
@@ -163,7 +163,7 @@ const HowWeWork = () => {
                     </div>
 
                     {/* Outcome Box */}
-                    <div className="bg-gradient-to-br from-primary-gold/10 to-primary-gold/5 border border-primary-gold/30 rounded-xl p-5">
+                    <div className="bg-gradient-to-br from-primary-red/8 to-primary-red/3 border border-primary-red/20 rounded-xl p-5">
                       <p className="text-[11px] uppercase tracking-[0.12em] text-primary-dark/50 font-bold mb-2">
                         What You Get
                       </p>
@@ -189,7 +189,7 @@ const HowWeWork = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <p className="text-[12px] uppercase tracking-[0.12em] text-primary-gold font-bold mb-4">
+            <p className="text-[12px] uppercase tracking-[0.12em] text-primary-red/80 font-bold mb-4">
               Our Principles
             </p>
             <h2 className="text-[40px] font-bold tracking-tight text-white mb-4">
