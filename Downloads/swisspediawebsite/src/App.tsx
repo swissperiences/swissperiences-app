@@ -189,10 +189,11 @@ function App() {
               </motion.button>
             </nav>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - iOS touch target compliant */}
             <button
-              className="lg:hidden p-2 hover:bg-neutral-200/50 rounded-lg transition-colors"
+              className="lg:hidden p-3 hover:bg-neutral-200/50 rounded-lg transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6 text-primary-dark" />
@@ -223,7 +224,7 @@ function App() {
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-left px-4 py-3 text-[15px] font-medium text-primary-dark/80 hover:text-primary-red hover:bg-neutral-100/50 rounded-lg transition-all"
+                    className="text-left px-4 py-4 text-[15px] font-medium text-primary-dark/80 hover:text-primary-red hover:bg-neutral-100/50 rounded-lg transition-all min-h-[48px]"
                   >
                     {item.label}
                   </button>
@@ -281,7 +282,7 @@ function App() {
         </motion.div>
 
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 py-32 md:py-40">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-32 lg:py-40">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -302,7 +303,7 @@ function App() {
             {/* Clear Thesis - Not Generic Pitch */}
             <motion.h1
               variants={itemVariants}
-              className="text-[52px] md:text-[68px] lg:text-[88px] font-bold leading-[1.05] text-primary-dark tracking-tight md:tracking-[-0.03em] mb-10 relative"
+              className="text-[42px] sm:text-[52px] md:text-[68px] lg:text-[88px] font-bold leading-[1.05] text-primary-dark tracking-tight md:tracking-[-0.03em] mb-8 md:mb-10 relative"
             >
               <span className="inline-block">
                 <motion.span
@@ -369,16 +370,16 @@ function App() {
                 onClick={() => scrollToSection('consultation')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group bg-primary-dark text-white px-10 py-5 text-[13px] font-semibold tracking-wide rounded-full hover:bg-primary-navy transition-all duration-300 flex items-center gap-3 shadow-luxury"
+                className="group bg-primary-dark text-white px-8 md:px-10 py-4 md:py-5 text-[13px] md:text-[14px] font-semibold tracking-wide rounded-full hover:bg-primary-navy transition-all duration-300 flex items-center gap-3 shadow-luxury min-h-[48px] w-full sm:w-auto justify-center"
               >
                 Request Strategic Consultation
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.button>
-              <Link to="/how-we-work">
+              <Link to="/how-we-work" className="w-full sm:w-auto">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="border border-primary-dark/20 text-primary-dark px-10 py-5 text-[13px] font-semibold tracking-wide rounded-full hover:border-primary-dark hover:bg-primary-dark/5 transition-all duration-300"
+                  className="border border-primary-dark/20 text-primary-dark px-8 md:px-10 py-4 md:py-5 text-[13px] md:text-[14px] font-semibold tracking-wide rounded-full hover:border-primary-dark hover:bg-primary-dark/5 transition-all duration-300 min-h-[48px] w-full"
                 >
                   How We Work
                 </motion.button>
@@ -439,12 +440,12 @@ function App() {
           </motion.div>
         </div>
 
-        {/* Minimalist Scroll Indicator */}
+        {/* Minimalist Scroll Indicator - Hidden on mobile */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 0.8 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+          className="hidden md:block absolute bottom-12 left-1/2 -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
